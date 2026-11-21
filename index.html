@@ -1,0 +1,1639 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moonfing 𖣂</title>
+<meta name="description" content="Moonfing — TikTok-автор: Quotes, Hopecore, цитаты и советы. 110K+ подписчиков, 40M+ лайков.">
+<meta property="og:title" content="Moonfing 𖣂">
+<meta property="og:description" content="Moonfing — TikTok-автор: Quotes, Hopecore, цитаты и советы. 110K+ подписчиков, 40M+ лайков.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<script>
+  (function () {
+    try {
+      var params = new URLSearchParams(window.location.search);
+      if (params.get('autostart') === '1' || window.sessionStorage.getItem('moonfing_entered') === '1') {
+        document.documentElement.classList.add('entered');
+      }
+    } catch (e) {}
+  })();
+</script>
+<noscript>
+  <style>
+    .entry-screen { display: none !important; }
+    .page-shell, .reveal { opacity: 1 !important; transform: none !important; }
+    html:not(.entered) body { overflow: auto !important; height: auto !important; }
+  </style>
+</noscript>
+<style>
+  :root {
+    --bg: #000000;
+    --surface: #0a0a0e;
+    --surface-hover: #101017;
+    --text: #e9e9ee;
+    --text-body: #d6d6df;
+    --muted: #9a9aa8;
+    --line: rgba(233, 233, 238, 0.11);
+    --line-strong: rgba(233, 233, 238, 0.22);
+    --amber: #d49a4e;
+    --amber-dim: rgba(212, 154, 78, 0.22);
+    --amber-glow: rgba(212, 154, 78, 0.34);
+    --green-neon: #4ca37b;
+    --green-glow: rgba(76, 163, 123, 0.28);
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background: var(--bg);
+    overflow-x: clip;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+    font-size: 17px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: clip;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  html:not(.entered) body {
+    overflow: hidden;
+    height: 100vh;
+  }
+
+  h1, h2, h3, .display {
+    font-family: 'Unbounded', 'Manrope', sans-serif;
+    letter-spacing: 0.02em;
+    text-wrap: balance;
+  }
+
+  /* =========================================================
+     NIGHT TAXI ATMOSPHERE: CITY LIGHTS, 90s FILM GRAIN, VIGNETTE
+     ========================================================= */
+  .atmosphere {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  .bokeh {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(42px);
+    will-change: transform;
+  }
+
+  .bokeh--amber {
+    width: 42vw;
+    max-width: 520px;
+    aspect-ratio: 1;
+    top: 8%;
+    left: -8%;
+    background: radial-gradient(circle, rgba(212, 154, 78, 0.14) 0%, rgba(212, 154, 78, 0.03) 55%, transparent 75%);
+    animation: driftA 36s ease-in-out infinite alternate;
+  }
+
+  .bokeh--red {
+    width: 38vw;
+    max-width: 480px;
+    aspect-ratio: 1;
+    top: 38%;
+    right: -10%;
+    background: radial-gradient(circle, rgba(164, 48, 52, 0.13) 0%, rgba(164, 48, 52, 0.03) 55%, transparent 75%);
+    animation: driftB 44s ease-in-out infinite alternate;
+  }
+
+  .bokeh--green {
+    width: 36vw;
+    max-width: 460px;
+    aspect-ratio: 1;
+    bottom: 6%;
+    left: 12%;
+    background: radial-gradient(circle, rgba(64, 154, 114, 0.11) 0%, rgba(64, 154, 114, 0.02) 55%, transparent 75%);
+    animation: driftC 40s ease-in-out infinite alternate;
+  }
+
+  .bokeh--amber-far {
+    width: 28vw;
+    max-width: 360px;
+    aspect-ratio: 1;
+    bottom: 24%;
+    right: 16%;
+    background: radial-gradient(circle, rgba(202, 134, 58, 0.09) 0%, transparent 70%);
+    animation: driftA 48s ease-in-out infinite alternate-reverse;
+  }
+
+  @keyframes driftA {
+    0%   { transform: translate3d(0, 0, 0) scale(1); opacity: 0.72; }
+    50%  { transform: translate3d(5vw, 4vh, 0) scale(1.08); opacity: 0.92; }
+    100% { transform: translate3d(-2vw, 9vh, 0) scale(0.95); opacity: 0.78; }
+  }
+
+  @keyframes driftB {
+    0%   { transform: translate3d(0, 0, 0) scale(1); opacity: 0.85; }
+    50%  { transform: translate3d(-6vw, -5vh, 0) scale(1.1); opacity: 0.65; }
+    100% { transform: translate3d(3vw, 6vh, 0) scale(0.96); opacity: 0.88; }
+  }
+
+  @keyframes driftC {
+    0%   { transform: translate3d(0, 0, 0) scale(0.96); opacity: 0.7; }
+    50%  { transform: translate3d(7vw, -6vh, 0) scale(1.06); opacity: 0.95; }
+    100% { transform: translate3d(-4vw, 3vh, 0) scale(1); opacity: 0.75; }
+  }
+
+  .film-grain {
+    position: fixed;
+    inset: -6%;
+    width: 112%;
+    height: 112%;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.045;
+    background-repeat: repeat;
+    animation: grainShift 0.36s steps(4) infinite;
+  }
+
+  @keyframes grainShift {
+    0%   { transform: translate3d(0, 0, 0); }
+    25%  { transform: translate3d(-1.5%, 1%, 0); }
+    50%  { transform: translate3d(1%, -1.5%, 0); }
+    75%  { transform: translate3d(-1%, -1%, 0); }
+    100% { transform: translate3d(1.5%, 1%, 0); }
+  }
+
+  .vignette {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 2;
+    background: radial-gradient(ellipse at 50% 45%, transparent 46%, rgba(0, 0, 0, 0.78) 100%);
+  }
+
+  /* =========================================================
+     ENTRY SCREEN
+     ========================================================= */
+  .entry-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.7s ease;
+  }
+
+  html.entered .entry-screen {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .entry-trigger {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background: radial-gradient(circle at 50% 48%, rgba(212, 154, 78, 0.08) 0%, rgba(0, 0, 0, 0) 48%);
+    color: var(--text);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    padding: 20px;
+    transition: transform 0.5s ease;
+  }
+
+  .entry-trigger:focus-visible {
+    outline: 2px solid var(--amber);
+    outline-offset: -8px;
+  }
+
+  .entry-moon {
+    font-size: clamp(44px, 9vw, 64px);
+    line-height: 1;
+    color: var(--text);
+    text-shadow: 0 0 28px rgba(212, 154, 78, 0.32), 0 0 60px rgba(233, 233, 238, 0.14);
+    animation: entryPulse 4s ease-in-out infinite;
+  }
+
+  .entry-title {
+    font-family: 'Unbounded', 'Manrope', sans-serif;
+    font-size: clamp(22px, 5vw, 34px);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--text);
+  }
+
+  .entry-trigger:hover .entry-moon {
+    text-shadow: 0 0 36px rgba(212, 154, 78, 0.52), 0 0 72px rgba(233, 233, 238, 0.24);
+  }
+
+  @keyframes entryPulse {
+    0%, 100% { transform: scale(1); opacity: 0.88; }
+    50%      { transform: scale(1.04); opacity: 1; }
+  }
+
+  /* =========================================================
+     MAIN LAYOUT, COVER & HERO
+     ========================================================= */
+  .page-shell {
+    position: relative;
+    z-index: 3;
+    opacity: 0;
+    transition: opacity 0.8s ease 0.1s;
+  }
+
+  html.entered .page-shell {
+    opacity: 1;
+  }
+
+  .cover {
+    height: 220px;
+    width: 100%;
+    background:
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0.42) 48%, #000000 100%),
+      url('assets/cover.jpg') center 30% / cover no-repeat,
+      #0a0a0f;
+    border-bottom: 0;
+    position: relative;
+  }
+
+  .wrap {
+    max-width: 740px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .hero {
+    text-align: center;
+    margin-top: -70px;
+    position: relative;
+  }
+
+  .ava {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 3px solid #000000;
+    outline: 1px solid rgba(233, 233, 238, 0.26);
+    background: #101015;
+    margin: 0 auto 18px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.85), 0 0 24px rgba(212, 154, 78, 0.08);
+  }
+
+  .ava img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  h1 {
+    font-size: clamp(32px, 7vw, 54px);
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--text);
+  }
+
+  .handle {
+    color: var(--muted);
+    margin-top: 8px;
+    font-size: 16px;
+  }
+
+  .tagline {
+    margin: 18px auto 0;
+    max-width: 560px;
+    color: var(--text);
+    font-size: 18px;
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin: 36px 0 10px;
+  }
+
+  .stat {
+    background: rgba(11, 11, 15, 0.82);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 18px 8px;
+    text-align: center;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  .stat b {
+    display: block;
+    font-family: 'Unbounded', sans-serif;
+    font-size: clamp(19px, 4.5vw, 30px);
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    color: var(--text);
+  }
+
+  .stat span {
+    display: block;
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 2px;
+  }
+
+  /* =========================================================
+     ARTICLE SECTIONS & TYPOGRAPHY
+     ========================================================= */
+  section {
+    padding: 56px 0 8px;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.72s cubic-bezier(0.22, 1, 0.36, 1), transform 0.72s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  h2 {
+    font-size: clamp(19px, 3.6vw, 22px);
+    font-weight: 600;
+    margin-bottom: 22px;
+    color: var(--amber);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 1.5em;
+  }
+
+  .moon-phase {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    color: var(--amber);
+    opacity: 0.86;
+  }
+
+  .moon-phase svg {
+    width: 18px;
+    height: 18px;
+    display: block;
+    overflow: visible;
+  }
+
+  .h2-text {
+    display: inline-block;
+  }
+
+  .h2-caret {
+    display: inline-block;
+    width: 2px;
+    height: 0.95em;
+    background: var(--amber);
+    margin-left: 3px;
+    vertical-align: -0.1em;
+    opacity: 0;
+  }
+
+  .h2-caret.is-typing {
+    opacity: 1;
+    animation: caretBlink 0.7s steps(2, start) infinite;
+  }
+
+  @keyframes caretBlink {
+    to { opacity: 0; }
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  section p {
+    max-width: 70ch;
+    margin-bottom: 16px;
+    color: var(--text-body);
+  }
+
+  section p:last-child {
+    margin-bottom: 0;
+  }
+
+  section p strong {
+    color: #ffffff;
+    font-weight: 700;
+  }
+
+  em {
+    color: #ffffff;
+    font-style: italic;
+  }
+
+  /* =========================================================
+     TABLE & CONTACT LINKS
+     ========================================================= */
+  table {
+    width: 100%;
+    max-width: 70ch;
+    border-collapse: collapse;
+    font-size: 16px;
+  }
+
+  td {
+    padding: 13px 6px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+
+  td:first-child {
+    color: var(--muted);
+    width: 40%;
+    padding-right: 14px;
+  }
+
+  td:last-child {
+    color: var(--text);
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: flex-start;
+    margin: 12px 0 8px;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 11px 24px;
+    border-radius: 999px;
+    border: 1px solid var(--line-strong);
+    background: rgba(11, 11, 15, 0.8);
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.35s ease, transform 0.2s ease;
+  }
+
+  .btn:hover {
+    background: var(--text);
+    color: #000000;
+    border-color: var(--text);
+    box-shadow: 0 0 22px var(--green-glow), 0 0 8px rgba(233, 233, 238, 0.22);
+    transform: translateY(-1px);
+  }
+
+  .btn.main {
+    background: var(--text);
+    color: #000000;
+    border-color: var(--text);
+  }
+
+  .btn.main:hover {
+    background: rgba(212, 154, 78, 0.14);
+    color: var(--text);
+    border-color: var(--amber);
+    box-shadow: 0 0 24px var(--amber-glow);
+  }
+
+  .btn:focus-visible {
+    outline: 2px solid var(--amber);
+    outline-offset: 3px;
+  }
+
+  /* =========================================================
+     FOOTER
+     ========================================================= */
+  footer {
+    margin-top: 80px;
+    padding: 34px 0 50px;
+    border-top: 1px solid var(--line);
+    text-align: center;
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  footer .moon {
+    font-size: 26px;
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+
+  /* =========================================================
+     DESKTOP MOON CURSOR (DISABLED ON TOUCH / MOBILE)
+     ========================================================= */
+  .moon-cursor-canvas {
+    display: none;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .moon-cursor-canvas {
+      display: block;
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    html.custom-cursor-active,
+    html.custom-cursor-active body,
+    html.custom-cursor-active a,
+    html.custom-cursor-active button {
+      cursor: none;
+    }
+  }
+
+  /* =========================================================
+     RESPONSIVE (360px+)
+     ========================================================= */
+  @media (max-width: 520px) {
+    body {
+      font-size: 17px;
+    }
+
+    .cover {
+      height: 170px;
+    }
+
+    .ava {
+      width: 124px;
+      height: 124px;
+    }
+
+    .hero {
+      margin-top: -62px;
+    }
+
+    .stats {
+      gap: 8px;
+    }
+
+    .stat {
+      padding: 14px 6px;
+      border-radius: 12px;
+    }
+
+    .stat b {
+      font-size: clamp(17px, 5vw, 22px);
+    }
+
+    .stat span {
+      font-size: 12px;
+    }
+
+    section {
+      padding: 46px 0 6px;
+    }
+
+    td:first-child {
+      width: 44%;
+    }
+  }
+
+  /* =========================================================
+     BACKGROUND DETAILS: STARS, FAR MOON, NIGHT SKYLINE
+     ========================================================= */
+  .stars {
+    position: absolute;
+    inset: 0;
+  }
+
+  .star {
+    position: absolute;
+    border-radius: 50%;
+    background: #e9e9ee;
+    opacity: 0.35;
+    animation: twinkle var(--d, 5s) ease-in-out var(--delay, 0s) infinite;
+  }
+
+  .star.warm {
+    background: #f1d6a8;
+  }
+
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.1; }
+    50%      { opacity: 0.8; }
+  }
+
+  .bg-moon {
+    position: absolute;
+    top: 6%;
+    right: 8%;
+    width: clamp(72px, 11vw, 128px);
+    aspect-ratio: 1;
+    opacity: 0.55;
+    animation: moonBreath 14s ease-in-out infinite alternate;
+  }
+
+  .bg-moon::before {
+    content: "";
+    position: absolute;
+    inset: -90%;
+    background: radial-gradient(circle, rgba(233, 233, 238, 0.1) 0%, rgba(212, 154, 78, 0.05) 38%, transparent 68%);
+  }
+
+  .bg-moon span {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #f3f0e6 0%, #cfcabb 58%, #8d887a 100%);
+    -webkit-mask-image: radial-gradient(circle at 72% 36%, transparent 54%, #000 55.5%);
+    mask-image: radial-gradient(circle at 72% 36%, transparent 54%, #000 55.5%);
+  }
+
+  @keyframes moonBreath {
+    0%   { opacity: 0.42; }
+    100% { opacity: 0.62; }
+  }
+
+  .skyline {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: clamp(110px, 21vh, 230px);
+    opacity: 0.9;
+    -webkit-mask-image: linear-gradient(to top, #000 55%, transparent 100%);
+    mask-image: linear-gradient(to top, #000 55%, transparent 100%);
+  }
+
+  .skyline svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .skyline .bld {
+    fill: #050507;
+    stroke: rgba(233, 233, 238, 0.05);
+    stroke-width: 1;
+  }
+
+  .skyline .win {
+    fill: #d49a4e;
+    animation: winGlow var(--d, 9s) ease-in-out var(--delay, 0s) infinite alternate;
+  }
+
+  .skyline .beacon {
+    fill: #c0373b;
+    animation: beaconBlink 3.2s steps(1, end) infinite;
+  }
+
+  @keyframes winGlow {
+    0%   { opacity: var(--lo, 0.22); }
+    100% { opacity: var(--hi, 0.55); }
+  }
+
+  @keyframes beaconBlink {
+    0%, 55%  { opacity: 0.9; }
+    56%, 100% { opacity: 0.08; }
+  }
+
+  /* =========================================================
+     EXTRAS: SELECTION, SCROLLBAR, PROGRESS, SHOOTING STAR,
+     COPY NICK, TOAST, BACK-TO-TOP
+     ========================================================= */
+  ::selection {
+    background: rgba(212, 154, 78, 0.35);
+    color: #ffffff;
+  }
+
+  html {
+    scrollbar-color: #2a2a33 #000000;
+    scrollbar-width: thin;
+  }
+
+  .progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    z-index: 900;
+    background: linear-gradient(90deg, var(--amber), var(--green-neon));
+    transform-origin: 0 50%;
+    transform: scaleX(0);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+  }
+
+  html.entered .progress {
+    opacity: 0.9;
+  }
+
+  .shooting-star {
+    position: absolute;
+    top: 14%;
+    left: 70%;
+    width: 140px;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(233, 233, 238, 0.75), rgba(233, 233, 238, 0));
+    opacity: 0;
+    transform: rotate(-32deg);
+    animation: shoot 31s ease-in 6s infinite;
+  }
+
+  @keyframes shoot {
+    0%   { opacity: 0; transform: translate3d(0, 0, 0) rotate(-32deg); }
+    1%   { opacity: 0.85; }
+    5%   { opacity: 0; transform: translate3d(-46vw, 30vh, 0) rotate(-32deg); }
+    100% { opacity: 0; transform: translate3d(-46vw, 30vh, 0) rotate(-32deg); }
+  }
+
+  button.handle {
+    display: inline-block;
+    background: none;
+    border: 0;
+    font: inherit;
+    cursor: pointer;
+    padding: 2px 8px;
+    border-radius: 8px;
+    transition: color 0.25s ease;
+  }
+
+  button.handle:hover {
+    color: var(--amber);
+  }
+
+  button.handle:focus-visible {
+    outline: 2px solid var(--amber);
+    outline-offset: 3px;
+  }
+
+  .toast {
+    position: fixed;
+    left: 50%;
+    bottom: 28px;
+    z-index: 950;
+    transform: translate(-50%, 14px);
+    padding: 10px 20px;
+    border-radius: 999px;
+    border: 1px solid var(--line-strong);
+    background: rgba(10, 10, 14, 0.94);
+    color: var(--text);
+    font-size: 14px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .toast.is-on {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+
+  .to-top {
+    position: fixed;
+    right: 18px;
+    bottom: 22px;
+    z-index: 900;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: 1px solid var(--line-strong);
+    background: rgba(10, 10, 14, 0.88);
+    color: var(--text);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .to-top.is-on {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .to-top:hover {
+    border-color: var(--amber);
+    box-shadow: 0 0 20px var(--amber-glow);
+  }
+
+  .to-top:focus-visible {
+    outline: 2px solid var(--amber);
+    outline-offset: 3px;
+  }
+
+  .to-top svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* =========================================================
+     REDUCED MOTION
+     ========================================================= */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    .shooting-star,
+    .progress,
+    .toast,
+    .to-top,
+    .star,
+    .bg-moon,
+    .skyline .win,
+    .skyline .beacon {
+      animation: none !important;
+      transition: none !important;
+    }
+
+    .star { opacity: 0.4; }
+    .skyline .beacon { opacity: 0.7; }
+
+    .shooting-star {
+      display: none !important;
+    }
+
+    .bokeh,
+    .film-grain,
+    .entry-moon {
+      animation: none !important;
+    }
+
+    .entry-screen,
+    .page-shell,
+    .reveal,
+    .btn {
+      transition: none !important;
+    }
+
+    .reveal {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+
+    .h2-caret {
+      display: none !important;
+    }
+
+    .moon-cursor-canvas {
+      display: none !important;
+    }
+
+    html.custom-cursor-active,
+    html.custom-cursor-active body,
+    html.custom-cursor-active a,
+    html.custom-cursor-active button {
+      cursor: auto !important;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="atmosphere" aria-hidden="true">
+  <div class="bokeh bokeh--amber"></div>
+  <div class="bokeh bokeh--red"></div>
+  <div class="bokeh bokeh--green"></div>
+  <div class="bokeh bokeh--amber-far"></div>
+  <div class="bg-moon"><span></span></div>
+  <div class="stars" id="stars"></div>
+  <div class="shooting-star"></div>
+  <div class="skyline" id="skyline"></div>
+</div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<div class="film-grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+
+<div class="entry-screen" id="entryScreen" role="dialog" aria-modal="true" aria-label="Moonfing">
+  <button type="button" class="entry-trigger" id="entryTrigger" aria-label="Открыть сайт Moonfing">
+    <span class="entry-moon" aria-hidden="true">𖣂</span>
+    <span class="entry-title">Moonfing</span>
+  </button>
+</div>
+
+<canvas class="moon-cursor-canvas" id="moonCursorCanvas" aria-hidden="true"></canvas>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<button type="button" class="to-top" id="toTop" aria-label="Наверх">
+  <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 14V4M4.5 8.5 9 4l4.5 4.5"/></svg>
+</button>
+
+<div class="page-shell" id="pageShell">
+  <div class="cover" role="img" aria-label="Шапка профиля Moonfing"></div>
+
+  <main class="wrap">
+    <header class="hero">
+      <div class="ava"><img src="assets/ava.jpg" alt="Moonfing" onerror="this.remove()"></div>
+      <h1>Moonfing 𖣂</h1>
+      <button type="button" class="handle" id="copyNick" data-copy="@Moonfing" title="Скопировать ник">@Moonfing · Moon · Moonling</button>
+      <p class="tagline">TikTok-автор из Астаны. Цитаты, Hopecore и советы.</p>
+
+      <div class="stats">
+        <div class="stat"><b data-count="110" data-suffix="K+">110K+</b><span>подписчиков</span></div>
+        <div class="stat"><b data-count="40" data-suffix="M+">40M+</b><span>лайков</span></div>
+        <div class="stat"><b>2022</b><span>начало пути</span></div>
+      </div>
+    </header>
+
+    <section id="about" class="reveal">
+      <p><strong>Moonfing</strong> (также <strong>Moon 𖣂</strong>; настоящее имя не раскрывается) — TikTok-автор из Астаны, известный роликами с цитатами и советами в жанре Hopecore. У аккаунта более 110 тысяч подписчиков и свыше 40 миллионов лайков. Пик известности пришёлся на 2023–2024 годы.</p>
+      <p>Автор не показывает лицо и не снимает ничего из своей личной жизни. Его ролики строятся на чужих видеофрагментах, музыке и коротком тексте.</p>
+    </section>
+
+    <section id="history" class="reveal">
+      <h2>
+        <span class="sr-only">История</span>
+        <span class="moon-phase" aria-hidden="true" data-phase="0"></span>
+        <span class="h2-text" aria-hidden="true" data-full="История">История</span><span class="h2-caret" aria-hidden="true"></span>
+      </h2>
+      <p>Первое видео вышло 12 октября 2022 года. Тогда аккаунт назывался <strong>@47.st</strong>. Когда число подписчиков дошло до 20 тысяч, автор сменил ник на <strong>@Moonfing</strong>, под которым известен сейчас.</p>
+      <p>Больше всего просмотров его видео набирали в 2023–2024 годах. В интернете сохранились его ремиксы с фристайлом Meek Mill. В 2024 году он ненадолго завёл YouTube-канал, но сейчас его не ведёт.</p>
+    </section>
+
+    <section id="content" class="reveal">
+      <h2>
+        <span class="sr-only">Контент</span>
+        <span class="moon-phase" aria-hidden="true" data-phase="0"></span>
+        <span class="h2-text" aria-hidden="true" data-full="Контент">Контент</span><span class="h2-caret" aria-hidden="true"></span>
+      </h2>
+      <p>Основные темы роликов — Quotes, Hopecore, цитаты и советы на разные жизненные случаи. Иногда Moonfing записывает тёплые видео с воспоминаниями и словами поддержки для друзей и для подписчиков.</p>
+      <p>Видеоряд в основном взят из американской жизни 1990-х и 2000-х: улицы, hoodlife, gang-эстетика. Автор сам об этом не рассказывает, но по подбору роликов видно, что он хорошо разбирается в хип-хопе и культуре того времени. Снимает и публикует он чаще всего по ночам.</p>
+    </section>
+
+    <section id="telegram" class="reveal">
+      <h2>
+        <span class="sr-only">Telegram-канал</span>
+        <span class="moon-phase" aria-hidden="true" data-phase="0"></span>
+        <span class="h2-text" aria-hidden="true" data-full="Telegram-канал">Telegram-канал</span><span class="h2-caret" aria-hidden="true"></span>
+      </h2>
+      <p>Параллельно с TikTok автор вёл Telegram-канал <strong>@Moonfings</strong>. Там он выкладывал фоны для видео: больше двух тысяч файлов с названиями. На канал было подписано около 3,7 тысяч человек, при нём работал чат для поклонников.</p>
+      <p>Ближе к 2024 году Moonfing удалил канал. Причиной он называл выгорание и сложности, связанные как с самим каналом, так и с жизнью в целом. Сейчас публичного канала нет: под тем же названием остался только небольшой канал с одной гифкой. Автор больше не делится фонами и не любит об этом говорить.</p>
+    </section>
+
+    <section id="name" class="reveal">
+      <h2>
+        <span class="sr-only">Псевдоним</span>
+        <span class="moon-phase" aria-hidden="true" data-phase="0"></span>
+        <span class="h2-text" aria-hidden="true" data-full="Псевдоним">Псевдоним</span><span class="h2-caret" aria-hidden="true"></span>
+      </h2>
+      <p>По словам автора, ник появился из-за лунатизма и частого сонного паралича. Он также перекликается со словом <em>moonling</em>, устаревшим обозначением жителя Луны.</p>
+    </section>
+
+    <section id="avatar" class="reveal">
+      <h2>
+        <span class="sr-only">Образ</span>
+        <span class="moon-phase" aria-hidden="true" data-phase="0"></span>
+        <span class="h2-text" aria-hidden="true" data-full="Образ">Образ</span><span class="h2-caret" aria-hidden="true"></span>
+      </h2>
+      <p>На аватарке аккаунта — Трэвис Бикл, герой фильма «Таксист» (1976). Автор не менял её около четырёх лет. Его интересует философия этого персонажа, и она заметна в текстах роликов: он пишет коротко, резко и без недомолвок. Многие подписчики ценят его именно за это.</p>
+    </section>
+
+    <section id="personal" class="reveal">
+      <h2>
+        <span class="sr-only">Личная жизнь</span>
+        <span class="moon-phase" aria-hidden="true" data-phase="0"></span>
+        <span class="h2-text" aria-hidden="true" data-full="Личная жизнь">Личная жизнь</span><span class="h2-caret" aria-hidden="true"></span>
+      </h2>
+      <p>Автор родился 13 апреля. Год рождения, настоящее имя и сведения о семье он не раскрывает.</p>
+      <p>Moonfing живёт в Астане и не скрывает, что он казах. Однажды он показывал в видео зимнюю погоду в городе, а в комментариях иногда пишет на казахском. Уже около четырёх лет он следит за каждым матчем сборной Франции по футболу.</p>
+      <p>По описанию подписчиков, он спокойный человек с чувством юмора, который легко находит общий язык с людьми и часто отвечает фанатам, давая советы. К правилам относится строго: не терпит рекламу и бессмысленные комментарии под своими видео.</p>
+    </section>
+
+    <section id="bio" class="reveal">
+      <h2>
+        <span class="sr-only">Кратко</span>
+        <span class="moon-phase" aria-hidden="true" data-phase="0"></span>
+        <span class="h2-text" aria-hidden="true" data-full="Кратко">Кратко</span><span class="h2-caret" aria-hidden="true"></span>
+      </h2>
+      <table>
+        <tr><td>Ник</td><td>@Moonfing, Moon 𖣂</td></tr>
+        <tr><td>Прежний ник</td><td>@47.st</td></tr>
+        <tr><td>Дата рождения</td><td>13 апреля</td></tr>
+        <tr><td>Город</td><td>Астана, Казахстан</td></tr>
+        <tr><td>Начал снимать</td><td>12 октября 2022</td></tr>
+        <tr><td>Жанры</td><td>Quotes, Hopecore, цитаты, советы</td></tr>
+        <tr><td>Telegram</td><td>@Moonfings (канал удалён)</td></tr>
+        <tr><td>Интересы</td><td>Сборная Франции, хип-хоп, Америка 1990–2000-х</td></tr>
+      </table>
+    </section>
+
+    <section id="contact" class="reveal">
+      <h2>
+        <span class="sr-only">Ссылки</span>
+        <span class="moon-phase" aria-hidden="true" data-phase="0"></span>
+        <span class="h2-text" aria-hidden="true" data-full="Ссылки">Ссылки</span><span class="h2-caret" aria-hidden="true"></span>
+      </h2>
+      <div class="links">
+        <a class="btn main" href="https://www.tiktok.com/@moonfing" target="_blank" rel="noopener">TikTok</a>
+        <a class="btn" href="https://t.me/moonfings" target="_blank" rel="noopener">Telegram</a>
+      </div>
+    </section>
+
+    <footer class="reveal">
+      <span class="moon">𖣂</span>
+      Moonfing
+    </footer>
+  </main>
+</div>
+
+<script>
+  (function () {
+    'use strict';
+
+    var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var root = document.documentElement;
+    var entryScreen = document.getElementById('entryScreen');
+    var entryTrigger = document.getElementById('entryTrigger');
+
+    function updateEntryAria() {
+      if (!entryScreen) return;
+      if (root.classList.contains('entered')) {
+        entryScreen.setAttribute('aria-hidden', 'true');
+      } else {
+        entryScreen.removeAttribute('aria-hidden');
+      }
+    }
+
+    function enterSite() {
+      if (root.classList.contains('entered')) return;
+      root.classList.add('entered');
+      try {
+        window.sessionStorage.setItem('moonfing_entered', '1');
+      } catch (e) {}
+      updateEntryAria();
+      initScrollAnimations();
+      updateMoonPhases();
+    }
+
+    updateEntryAria();
+    if (entryTrigger) {
+      entryTrigger.addEventListener('click', enterSite);
+    }
+
+    /* =========================================================
+       SCROLL-DRIVEN MOON PHASE SVG
+       ========================================================= */
+    var moonNodes = Array.prototype.slice.call(document.querySelectorAll('.moon-phase'));
+
+    function buildMoonPhaseSvg(progress) {
+      // progress in [0, 1] cycles from new moon -> waxing -> full -> waning -> new
+      var p = Math.max(0, Math.min(1, progress));
+      var angle = p * Math.PI * 2;
+      var rx = Math.abs(Math.cos(angle)) * 7;
+      var litPath = '';
+
+      if (p < 0.03 || p > 0.97) {
+        // New moon: subtle dark disc with dim ring
+        litPath = '';
+      } else if (p > 0.47 && p < 0.53) {
+        // Full moon
+        litPath = '<circle cx="9" cy="9" r="7" fill="currentColor" opacity="0.92"/>';
+      } else if (p < 0.5) {
+        // Waxing (right side lit)
+        var sweepInner = p < 0.25 ? 0 : 1;
+        litPath =
+          '<path d="M 9 2 A 7 7 0 0 1 9 16 A ' + rx.toFixed(2) + ' 7 0 0 ' + sweepInner + ' 9 2 Z" fill="currentColor" opacity="0.9"/>';
+      } else {
+        // Waning (left side lit)
+        var sweepInnerW = p < 0.75 ? 1 : 0;
+        litPath =
+          '<path d="M 9 2 A 7 7 0 0 0 9 16 A ' + rx.toFixed(2) + ' 7 0 0 ' + sweepInnerW + ' 9 2 Z" fill="currentColor" opacity="0.9"/>';
+      }
+
+      return (
+        '<svg viewBox="0 0 18 18" aria-hidden="true">' +
+        '<circle cx="9" cy="9" r="7" fill="rgba(212,154,78,0.08)" stroke="currentColor" stroke-width="1.1" opacity="0.65"/>' +
+        litPath +
+        '</svg>'
+      );
+    }
+
+    /* Pre-bake subtle 90s film grain tile once onto .film-grain */
+    (function initFilmGrain() {
+      var grainEl = document.querySelector('.film-grain');
+      if (!grainEl) return;
+      try {
+        var c = document.createElement('canvas');
+        c.width = 128;
+        c.height = 128;
+        var gctx = c.getContext('2d');
+        if (!gctx) return;
+        var img = gctx.createImageData(128, 128);
+        var data = img.data;
+        for (var i = 0; i < data.length; i += 4) {
+          var v = Math.floor(Math.random() * 255);
+          data[i] = v;
+          data[i + 1] = v;
+          data[i + 2] = v;
+          data[i + 3] = 255;
+        }
+        gctx.putImageData(img, 0, 0);
+        grainEl.style.backgroundImage = 'url(' + c.toDataURL('image/png') + ')';
+      } catch (e) {}
+    })();
+
+    function updateMoonPhases() {
+      var doc = document.documentElement;
+      var maxScroll = Math.max(1, doc.scrollHeight - window.innerHeight);
+      var baseProgress = Math.max(0, Math.min(1, window.scrollY / maxScroll));
+      var phaseIndex = Math.round(baseProgress * 7);
+      var lunarProgress = 0.08 + baseProgress * 0.84;
+
+      for (var i = 0; i < moonNodes.length; i++) {
+        var node = moonNodes[i];
+        node.setAttribute('data-phase', String(phaseIndex));
+        node.innerHTML = buildMoonPhaseSvg(lunarProgress);
+      }
+    }
+
+    updateMoonPhases();
+    var phaseTicking = false;
+    window.addEventListener('scroll', function () {
+      if (!phaseTicking) {
+        phaseTicking = true;
+        window.requestAnimationFrame(function () {
+          updateMoonPhases();
+          revealBottomSections();
+          phaseTicking = false;
+        });
+      }
+    }, { passive: true });
+
+    /* =========================================================
+       SCROLL REVEAL + TYPEWRITER HEADINGS
+       ========================================================= */
+    var revealEls = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+    var headingTexts = Array.prototype.slice.call(document.querySelectorAll('.h2-text'));
+    var animationsStarted = false;
+
+    function typeHeading(el) {
+      if (!el || el.dataset.typed === '1') return;
+      el.dataset.typed = '1';
+      var full = el.getAttribute('data-full') || el.textContent || '';
+      var caret = el.nextElementSibling;
+
+      if (prefersReducedMotion) {
+        el.textContent = full;
+        if (caret) caret.classList.remove('is-typing');
+        return;
+      }
+
+      el.textContent = '';
+      if (caret) caret.classList.add('is-typing');
+      var idx = 0;
+
+      function step() {
+        idx += 1;
+        el.textContent = full.slice(0, idx);
+        if (idx < full.length) {
+          window.setTimeout(step, 38);
+        } else if (caret) {
+          window.setTimeout(function () {
+            caret.classList.remove('is-typing');
+          }, 650);
+        }
+      }
+
+      window.setTimeout(step, 90);
+    }
+
+    function revealBottomSections() {
+      if (!root.classList.contains('entered')) return;
+      var nearBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 40;
+      for (var i = 0; i < revealEls.length; i++) {
+        var el = revealEls[i];
+        var rect = el.getBoundingClientRect();
+        if (nearBottom || rect.top < window.innerHeight * 0.94) {
+          el.classList.add('is-visible');
+          var h2 = el.querySelector('.h2-text');
+          if (h2) typeHeading(h2);
+        }
+      }
+    }
+
+    function initScrollAnimations() {
+      if (animationsStarted) return;
+      animationsStarted = true;
+
+      if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+        for (var i = 0; i < revealEls.length; i++) {
+          revealEls[i].classList.add('is-visible');
+        }
+        for (var j = 0; j < headingTexts.length; j++) {
+          headingTexts[j].textContent = headingTexts[j].getAttribute('data-full') || headingTexts[j].textContent;
+          headingTexts[j].dataset.typed = '1';
+        }
+        return;
+      }
+
+      // Prepare headings below the fold before observer triggers
+      for (var k = 0; k < headingTexts.length; k++) {
+        var ht = headingTexts[k];
+        var rect = ht.getBoundingClientRect();
+        if (rect.top >= window.innerHeight * 0.92) {
+          ht.textContent = '';
+        }
+      }
+
+      var observer = new IntersectionObserver(function (entries) {
+        for (var m = 0; m < entries.length; m++) {
+          var entry = entries[m];
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            var h2 = entry.target.querySelector('.h2-text');
+            if (h2) typeHeading(h2);
+            observer.unobserve(entry.target);
+          }
+        }
+      }, {
+        threshold: 0.08,
+        rootMargin: '0px 0px -24px 0px'
+      });
+
+      for (var n = 0; n < revealEls.length; n++) {
+        observer.observe(revealEls[n]);
+      }
+
+      revealBottomSections();
+    }
+
+    if (root.classList.contains('entered')) {
+      initScrollAnimations();
+    }
+
+    /* =========================================================
+       DESKTOP CUSTOM MOON CURSOR WITH FAINT TRAIL
+       ========================================================= */
+    var hasFinePointer = window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    var cursorCanvas = document.getElementById('moonCursorCanvas');
+
+    if (hasFinePointer && !prefersReducedMotion && cursorCanvas && cursorCanvas.getContext) {
+      var ctx = cursorCanvas.getContext('2d');
+      var dpr = Math.min(window.devicePixelRatio || 1, 2);
+      var pointerX = -200;
+      var pointerY = -200;
+      var smoothX = -200;
+      var smoothY = -200;
+      var cursorVisible = false;
+      var isHoveringInteractive = false;
+      var trail = [];
+      var rafId = 0;
+
+      function resizeCursorCanvas() {
+        dpr = Math.min(window.devicePixelRatio || 1, 2);
+        cursorCanvas.width = Math.floor(window.innerWidth * dpr);
+        cursorCanvas.height = Math.floor(window.innerHeight * dpr);
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      }
+
+      resizeCursorCanvas();
+      window.addEventListener('resize', resizeCursorCanvas);
+
+      function drawCrescentMoon(x, y, radius, alpha) {
+        ctx.save();
+        ctx.translate(x, y);
+        ctx.rotate(-0.35);
+
+        // Soft ambient glow
+        var glow = ctx.createRadialGradient(0, 0, 1, 0, 0, radius * 2.4);
+        glow.addColorStop(0, 'rgba(212, 154, 78, ' + (0.28 * alpha) + ')');
+        glow.addColorStop(1, 'rgba(212, 154, 78, 0)');
+        ctx.fillStyle = glow;
+        ctx.beginPath();
+        ctx.arc(0, 0, radius * 2.4, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Moon crescent shape
+        ctx.beginPath();
+        ctx.arc(0, 0, radius, 0, Math.PI * 2, false);
+        ctx.fillStyle = 'rgba(233, 233, 238, ' + (0.94 * alpha) + ')';
+        ctx.fill();
+
+        ctx.globalCompositeOperation = 'destination-out';
+        ctx.beginPath();
+        ctx.arc(radius * 0.48, -radius * 0.24, radius * 0.85, 0, Math.PI * 2, false);
+        ctx.fill();
+        ctx.globalCompositeOperation = 'source-over';
+
+        ctx.restore();
+      }
+
+      function renderCursor() {
+        ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+
+        if (cursorVisible) {
+          smoothX += (pointerX - smoothX) * 0.34;
+          smoothY += (pointerY - smoothY) * 0.34;
+
+          trail.push({ x: smoothX, y: smoothY, life: 1 });
+          if (trail.length > 14) trail.shift();
+        }
+
+        for (var i = trail.length - 1; i >= 0; i--) {
+          var pt = trail[i];
+          pt.life -= 0.08;
+          if (pt.life <= 0) {
+            trail.splice(i, 1);
+            continue;
+          }
+          var size = 1.4 + pt.life * 2.2;
+          ctx.beginPath();
+          ctx.arc(pt.x, pt.y, size, 0, Math.PI * 2);
+          ctx.fillStyle = 'rgba(212, 154, 78, ' + (pt.life * 0.22) + ')';
+          ctx.fill();
+        }
+
+        if (cursorVisible) {
+          var moonRadius = isHoveringInteractive ? 9.5 : 7.5;
+          drawCrescentMoon(smoothX, smoothY, moonRadius, 1);
+        }
+
+        if (cursorVisible || trail.length > 0) {
+          rafId = window.requestAnimationFrame(renderCursor);
+        } else {
+          rafId = 0;
+        }
+      }
+
+      function startLoop() {
+        if (!rafId) {
+          rafId = window.requestAnimationFrame(renderCursor);
+        }
+      }
+
+      document.addEventListener('pointermove', function (e) {
+        if (e.pointerType === 'touch') {
+          cursorVisible = false;
+          root.classList.remove('custom-cursor-active');
+          return;
+        }
+        pointerX = e.clientX;
+        pointerY = e.clientY;
+        if (!cursorVisible) {
+          smoothX = pointerX;
+          smoothY = pointerY;
+          cursorVisible = true;
+          root.classList.add('custom-cursor-active');
+        }
+        var target = e.target;
+        isHoveringInteractive = !!(target && target.closest && target.closest('a, button'));
+        startLoop();
+      }, { passive: true });
+
+      document.addEventListener('mouseleave', function () {
+        cursorVisible = false;
+        root.classList.remove('custom-cursor-active');
+      });
+
+      window.addEventListener('blur', function () {
+        cursorVisible = false;
+        root.classList.remove('custom-cursor-active');
+      });
+    }
+  })();
+</script>
+
+<script>
+  /* =========================================================
+     BACKGROUND DETAILS GENERATOR (stable layout via seeded PRNG)
+     ========================================================= */
+  (function () {
+    'use strict';
+
+    var seed = 1947;
+    function rnd() {
+      seed = (seed * 1664525 + 1013904223) % 4294967296;
+      return seed / 4294967296;
+    }
+
+    /* Stars */
+    var starsEl = document.getElementById('stars');
+    if (starsEl) {
+      var count = window.innerWidth < 600 ? 46 : 78;
+      var frag = document.createDocumentFragment();
+      for (var i = 0; i < count; i++) {
+        var s = document.createElement('i');
+        s.className = 'star' + (rnd() < 0.18 ? ' warm' : '');
+        var size = rnd() < 0.12 ? 2.4 : (rnd() < 0.5 ? 1.6 : 1.1);
+        s.style.cssText =
+          'left:' + (rnd() * 100).toFixed(2) + '%;' +
+          'top:' + (rnd() * 72).toFixed(2) + '%;' +
+          'width:' + size + 'px;height:' + size + 'px;' +
+          '--d:' + (3 + rnd() * 6).toFixed(1) + 's;' +
+          '--delay:' + (-rnd() * 8).toFixed(1) + 's;';
+        frag.appendChild(s);
+      }
+      starsEl.appendChild(frag);
+    }
+
+    /* Night skyline with a few lit windows and a red beacon */
+    var skyEl = document.getElementById('skyline');
+    if (skyEl) {
+      var W = 1200, H = 220, x = -10, parts = [], tallest = { h: 0, x: 0, w: 0 };
+      while (x < W + 10) {
+        var w = 28 + Math.floor(rnd() * 52);
+        var h = 46 + Math.floor(rnd() * 120);
+        var top = H - h;
+        parts.push('<rect class="bld" x="' + x + '" y="' + top + '" width="' + w + '" height="' + h + '"/>');
+        if (h > tallest.h && x > 80 && x < W - 160) tallest = { h: h, x: x, w: w };
+
+        for (var wy = top + 10; wy < H - 8; wy += 12) {
+          for (var wx = x + 7; wx < x + w - 8; wx += 11) {
+            if (rnd() < 0.11) {
+              parts.push(
+                '<rect class="win" x="' + wx + '" y="' + wy + '" width="3" height="4"' +
+                ' style="--d:' + (6 + rnd() * 10).toFixed(1) + 's;--delay:' + (-rnd() * 10).toFixed(1) + 's;' +
+                '--lo:' + (0.12 + rnd() * 0.15).toFixed(2) + ';--hi:' + (0.4 + rnd() * 0.3).toFixed(2) + '"/>'
+              );
+            }
+          }
+        }
+        x += w + Math.floor(rnd() * 6);
+      }
+
+      if (tallest.h > 0) {
+        var bx = tallest.x + tallest.w / 2;
+        var by = H - tallest.h;
+        parts.push('<rect class="bld" x="' + (bx - 1) + '" y="' + (by - 16) + '" width="2" height="16"/>');
+        parts.push('<circle class="beacon" cx="' + bx + '" cy="' + (by - 17) + '" r="2"/>');
+      }
+
+      skyEl.innerHTML =
+        '<svg viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">' +
+        parts.join('') +
+        '</svg>';
+    }
+  })();
+</script>
+
+<script>
+  /* =========================================================
+     EXTRAS: PROGRESS BAR, STAT COUNTERS, COPY NICK, BACK-TO-TOP
+     ========================================================= */
+  (function () {
+    'use strict';
+
+    var root = document.documentElement;
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    /* Scroll progress + back-to-top */
+    var bar = document.getElementById('progress');
+    var toTop = document.getElementById('toTop');
+    var ticking = false;
+
+    function onScroll() {
+      var max = Math.max(1, root.scrollHeight - window.innerHeight);
+      var p = Math.max(0, Math.min(1, window.scrollY / max));
+      if (bar) bar.style.transform = 'scaleX(' + p.toFixed(4) + ')';
+      if (toTop) toTop.classList.toggle('is-on', window.scrollY > 700);
+      ticking = false;
+    }
+
+    window.addEventListener('scroll', function () {
+      if (!ticking) {
+        ticking = true;
+        window.requestAnimationFrame(onScroll);
+      }
+    }, { passive: true });
+    onScroll();
+
+    if (toTop) {
+      toTop.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+      });
+    }
+
+    /* Stat counters: 0 -> value, once, after the entry screen is opened */
+    var counted = false;
+
+    function runCounters() {
+      if (counted) return;
+      counted = true;
+      var nodes = document.querySelectorAll('[data-count]');
+      if (reduce) return;
+
+      Array.prototype.forEach.call(nodes, function (el) {
+        var target = parseFloat(el.getAttribute('data-count'));
+        var suffix = el.getAttribute('data-suffix') || '';
+        if (isNaN(target)) return;
+        var start = null;
+        var duration = 1400;
+
+        function frame(ts) {
+          if (start === null) start = ts;
+          var t = Math.min(1, (ts - start) / duration);
+          var eased = 1 - Math.pow(1 - t, 3);
+          el.textContent = Math.round(target * eased) + (t < 1 ? '' : suffix);
+          if (t < 1) window.requestAnimationFrame(frame);
+          else el.textContent = target + suffix;
+        }
+
+        el.textContent = '0';
+        window.requestAnimationFrame(frame);
+      });
+    }
+
+    var entryBtn = document.getElementById('entryTrigger');
+    if (root.classList.contains('entered')) {
+      runCounters();
+    } else if (entryBtn) {
+      entryBtn.addEventListener('click', function () {
+        window.setTimeout(runCounters, 350);
+      });
+    }
+
+    /* Copy nick */
+    var toast = document.getElementById('toast');
+    var toastTimer = 0;
+
+    function showToast(text) {
+      if (!toast) return;
+      toast.textContent = text;
+      toast.classList.add('is-on');
+      window.clearTimeout(toastTimer);
+      toastTimer = window.setTimeout(function () {
+        toast.classList.remove('is-on');
+      }, 1800);
+    }
+
+    function fallbackCopy(text) {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      var ok = false;
+      try { ok = document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(ta);
+      return ok;
+    }
+
+    var copyBtn = document.getElementById('copyNick');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', function () {
+        var text = copyBtn.getAttribute('data-copy') || '@Moonfing';
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(function () {
+            showToast('Ник скопирован');
+          }, function () {
+            showToast(fallbackCopy(text) ? 'Ник скопирован' : text);
+          });
+        } else {
+          showToast(fallbackCopy(text) ? 'Ник скопирован' : text);
+        }
+      });
+    }
+  })();
+</script>
+</body>
+</html>
